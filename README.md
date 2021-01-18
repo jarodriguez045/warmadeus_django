@@ -29,3 +29,8 @@ in the file add:
     POSTGRES_DB=project_prod
 
 NOTE: change password and usernames. keep secret
+
+$ docker-compose -f docker-compose.prod.yml up -d --build
+$ docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
+
+http://localhost:1337
